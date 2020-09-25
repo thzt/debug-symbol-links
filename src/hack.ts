@@ -6,6 +6,7 @@ import createProgram from './util/program';
 import goToDefinition from './util/definition';
 import { bindSourceFile } from './util/source-file';
 import hackResolveAlias from './util/resolve-alias';
+import hover from './util/hover';
 
 const anyTs = ts as any;
 
@@ -14,7 +15,7 @@ anyTs._hackResolveAlias = hackResolveAlias;
 
 const main = async () => {
   const sourceFilePath = path.join(__dirname, '../debug/hack.ts');
-  const position = 28;  // 查看 x 的定义
+  const position = 28;  // x 的位置
 
   const rootFiles = [sourceFilePath];
   const program = createProgram(rootFiles, compilerOptions);
@@ -23,6 +24,10 @@ const main = async () => {
 
   debugger
   const definitions = goToDefinition(program, sourceFile, position);
+  debugger
+
+  debugger
+  const message = hover(program, sourceFile, position);
   debugger
 };
 
