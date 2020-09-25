@@ -1,0 +1,29 @@
+{
+  "name": "debug-symbol-links",
+  "version": "1.0.0",
+  "description": "",
+  "main": "out/index.js",
+  "scripts": {
+    "postinstall": "node ./script/index.js",
+    "watch": "rm -rf ./out/ && tsc -w -p ./"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thzt/debug-symbol-links.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thzt/debug-symbol-links/issues"
+  },
+  "homepage": "https://github.com/thzt/debug-symbol-links#readme",
+  "dependencies": {
+    "typescript": "3.7.3"
+  },
+  "devDependencies": {
+    "@types/node": "^14.11.2",
+    "js-embedder": "^1.0.9",
+    "typescript": "3.7.3"
+  }
+}
